@@ -4,7 +4,6 @@ import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-
 import static com.codeborne.selenide.Selenide.page;
 
 public class MainPage {
@@ -26,6 +25,4 @@ public class MainPage {
 
         return page(TotalWeatherDataPage.class);
     }
-
-
 }

@@ -18,7 +18,6 @@ public class WeatherForecastTest {
     @Before
     public void maxWindowSizeAndAcceptCookies() {
         Configuration.startMaximized = true;
-
         mainPage = open(MainPage.mainPageUrl, MainPage.class);
         mainPage.acceptCookies();
     }
@@ -37,7 +36,7 @@ public class WeatherForecastTest {
                 .insertCity(cityName)
                 .clickSearchButton();
 
-        Assert.assertTrue(weatherDashBoardPage.headerIsDisplayed());
+        Assert.assertTrue(weatherDashBoardPage.headerIsDisplayed(cityName));
         Assert.assertTrue(weatherDashBoardPage.chartTemperatureIsDisplayed());
         Assert.assertTrue(weatherDashBoardPage.chartWindIsDisplayed());
     }
